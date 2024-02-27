@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="CLARA: Classifying and Disambiguating User Commands for Reliable Interactive Robotic Agents">
+  <meta property="og:title" content="CLARA"/>
+  <meta property="og:description" content="Classifying and Disambiguating User Commands for Reliable Interactive Robotic Agents"/>
+  <!-- <meta property="og:url" content="URL OF THE WEBSITE"/> -->
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <!-- <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/> -->
+
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+  <script src="static/js/change_select.js"></script>
+
+  <title>MASK</title>
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <style>
+    .child{
+      text-align: left;
+      height: 350px;
+      margin: 20px;
+      border: 2px solid;
+      background-color: #ececeb;
+    }
+  </style>
+</head>
+<body>
+
+
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+        <div class="columns is-centered">
+            <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">MASK</h1>
+            <!-- Paper authors -->
+            <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://sites.google.com/view/cv-jeongeunpark-korea" target="_blank">Jeongeun Park</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://github.com/pull-ups" target="_blank">Taemoon Jeong</a><sup>1</sup>,</span>
+                <span class="author-block">
+                  <span class="author-block">
+                  <a href="https://yj-yu.github.io/home/" target="_blank">Matthew Pan</a><sup>2</sup>,</span>
+                <span class="author-block">
+                        <a href="https://sites.google.com/view/sungjoon-choi/home" target="_blank">
+                            Sungjoon Choi</a><sup>1</sup></span>
+                </div>
+            <div class="is-size-5 publication-authors">
+                <span class="author-block">Korea University, Korea<sup>1</sup><br>
+                    Queens University, Canada<sup>2</sup><br>
+                </span>
+                </div>
+            
+        <div class="column has-text-centered">
+          <div class="publication-links">
+               <!-- Arxiv PDF link -->
+            <span class="link-block">
+              <a href="http://arxiv.org/abs/2306.10376" target="_blank"
+              class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <i class="fas fa-file-pdf"></i>
+              </span>
+              <span>Paper</span>
+            </a>
+          </span>
+          <!-- Github link -->
+          <span class="link-block">
+            <a href="https://github.com/jeongeun980906/CLARA-SaGC-Code" target="_blank"
+            class="external-link button is-normal is-rounded is-dark">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+            <span>Code</span>
+          </a>
+        </span>
+    <span class="link-block">
+      <a href="./prompts.html" target="_blank"
+      class="external-link button is-normal is-rounded is-dark">
+      <span class="icon">
+        <i class="fas fa-file-pdf"></i>
+      </span>
+      <span>Prompts</span>
+    </a>
+  </span>
+
+       </div>
+    </div>
+</section>
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">News</h2>
+          Still Writing the paper...
+            <!-- Our paper got accepted in Robotics and Automation Letters (RaL)!🥳🥳 -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Paper abstract -->
+<section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+                Abstract here
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <!-- Paper video. -->
+        <h2 class="title is-3">Proposed method</h2>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            Method VIDEO HERE
+            <!-- <div class="publication-video"> -->
+                <!-- <video poster="" id="video2" autoplay controls muted loop height="100%">
+                    <source src="assets/method.mp4"
+                    type="video/mp4">
+                  </video> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Paper video. -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3"> Personality based Persona Demonstrations</h2>
+        <div class="column is-four-fifths">
+          <div class="subtitle has-text-centered">
+            <p>Choose Persona</p>
+            <select class="form-select" size="4" aria-label="size 4 select example">
+              <option value="demo_1" style="font-size: x-large">Extroverted and Cooperative</option>
+              <option value="demo_2" style="font-size: x-large">Extroverted and Uncooperative</option>
+              <option value="demo_3" style="font-size: x-large">Introverted and Cooperative</option>
+              <option value="demo_4" style="font-size: x-large">Introverted and Uncooperative</option>
+            </select>
+            <p><br>Video</p>
+            <div class="row" id="content_demo_1">
+              <div class="col-md-12 mb-2">
+                <video id="vid_demo_1" preload="metadata" playsinline controls>
+                    <!-- Your video file here -->
+                    <source src="assets/EU_tunned.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+              <div class="row">
+                <span style="color:red">Extroverted and Cooperative</span> <br>
+                Some Image will be good
+              </div>
+            </div>
+            <div class="row" id="content_demo_2" style="display:None">
+              <div class="col-md-12 mb-2">
+                <video id="vid_demo_2" preload="metadata" playsinline controls>
+                    <!-- Your video file here -->
+                    <source src="assets/EU_tunned.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+              <div class="row">
+                <span style="color:red">Extroverted and Unooperative</span> <br>
+                Some Image will be good
+              </div>
+            </div>
+            <div class="row" id="content_demo_3" style="display:None">
+              <div class="col-md-12 mb-2">
+                <video id="vid_demo_3" preload="metadata" playsinline controls>
+                    <!-- Your video file here -->
+                    <source src="assets/IC_tunned.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+              <div class="row">
+                <span style="color:red">Extroverted and Cooperative</span> <br>
+                Some Image will be good
+              </div>
+            </div>
+            <div class="row" id="content_demo_4" style="display:None">
+              <div class="col-md-12 mb-2">
+                <video id="vid_demo_4" preload="metadata" playsinline controls>
+                    <!-- Your video file here -->
+                    <source src="assets/IU_tunned.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+              <div class="row">
+                <span style="color:red">Extroverted and Cooperative</span> <br>
+                Some Image will be good
+              </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>  
+
+
+<!-- Paper video. -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3"> Character based Persona Demonstrations</h2>
+        <div class="column is-four-fifths">
+          <div class="subtitle has-text-centered">
+            <p>Choose Persona</p>
+            <select class="form-select" size="4" aria-label="size 4 select example">
+              <option value="demo_12" style="font-size: x-large">Minions</option>
+              <option value="demo_22" style="font-size: x-large">Coward Lion</option>
+              <option value="demo_32" style="font-size: x-large">Scrooge</option>
+              <option value="demo_42" style="font-size: x-large">Spock</option>
+            </select>
+            <p><br>Video</p>
+            <div class="row" id="content_demo_12">
+              <div class="col-md-12 mb-2">
+                <video id="vid_demo_12" preload="metadata" playsinline controls>
+                    <!-- Your video file here -->
+                    <source src="assets/MM_tunned.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+              <div class="row">
+                <span style="color:red">Minions from film Minions</span> <br>
+                Some Image will be good
+              </div>
+            </div>
+            <div class="row" id="content_demo_22" style="display:None">
+              <div class="col-md-12 mb-2">
+                <video id="vid_demo_22" preload="metadata" playsinline controls>
+                    <!-- Your video file here -->
+                    <source src="assets/LO_tunned.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+              <div class="row">
+                <span style="color:red">Coward Lion from Wizard of OZ</span> <br>
+                Some Image will be good
+              </div>
+            </div>
+            <div class="row" id="content_demo_32" style="display:None">
+              <div class="col-md-12 mb-2">
+                <video id="vid_demo_32" preload="metadata" playsinline controls>
+                    <!-- Your video file here -->
+                    <source src="assets/SC_tunned.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+              <div class="row">
+                <span style="color:red">Scrooge from Chirstmas Carol</span> <br>
+                Some Image will be good
+              </div>
+            </div>
+            <div class="row" id="content_demo_42" style="display:None">
+              <div class="col-md-12 mb-2">
+                <video id="vid_demo_42" preload="metadata" playsinline controls>
+                    <!-- Your video file here -->
+                    <source src="assets/SS_tunned.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+              <div class="row">
+                <span style="color:red">Spock from film StarTrek</span> <br>
+                Some Image will be good
+              </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>  
+
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>Bibtex
+  </code></pre>
+    </div>
+</section>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="CLARA: Classifying and Disambiguating User Commands for Reliable Interactive Robotic Agents">
+  <meta property="og:title" content="CLARA"/>
+  <meta property="og:description" content="Classifying and Disambiguating User Commands for Reliable Interactive Robotic Agents"/>
+  <!-- <meta property="og:url" content="URL OF THE WEBSITE"/> -->
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <!-- <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/> -->
+
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+  <script src="static/js/change_select.js"></script>
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <style>
+    .child{
+      text-align: left;
+      height: 700px;
+      margin: 20px;
+      border: 2px solid;
+      background-color: #ececeb;
+    }
+  </style>
+</head>
+<body>
+  
+<!-- Paper video. -->
+<section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Prompts</h2>
+          <div class="column is-four-fifths">
+            <div class="subtitle has-text-centered">
+              <p>Choose Prompt</p>
+              <select class="form-select" size="4" aria-label="size 4 select example">
+                <option value="demo_1" style="font-size: x-large">motion selection prompt</option>
+                <option value="demo_2" style="font-size: x-large">expression integration prompt</option>
+                <option value="demo_3" style="font-size: x-large">state initialization prompt</option>
+                <option value="demo_4" style="font-size: x-large">state transition prompt</option>
+              </select>
+              <p><br>Prompts</p>
+              <div class="row" id="content_demo_1">
+                <div class="child">
+                  <span style="color:green">System Prompt</span><br>
+                  I am <span style="color:rgb(90, 124, 248)">[persona]</span> robot that is interacting with users. <br>
+                  I can interact with the users by motions, depending on the user’s actions. I want to make a finite-state machine to interact with the user.
+                  I have a set of motions that I can do, and I have a set of observations that I can observe from the user. I can conduct the following actions: <br>
+                  <span style="color:rgb(90, 124, 248)">[motions]</span>
+                  <br>
+                  We have 4 different observations: <br>
+                  1. hand up: The number of person’s raised hand <br>
+                  2. distance: The distance between the person and the robot <br>
+                  3. gaze: The gaze of the person on the robot <br>
+                  4.hand velocity: The velocity of the person’s hand. This would mean how fast the person’s hand is waving. <br>
+                  5. approaching vel: The velocity of the person’s approaching to the robot. This would mean how fast the person is approaching the robot.<br>
+                  <span style="color:green">User Prompt</span><br>
+                  You are <span style="color:rgb(90, 124, 248)">[persona]</span> robot that is interacting with users. <br>
+                  Choose motions that you want to play, considering your persona. <br>
+                  Choose at least 0.25<span style="color:rgb(90, 124, 248)">[M]</span> and at most 0.5<span style="color:rgb(90, 124, 248)">[M]</span> motions. <br>
+                  Try to choose the minimum motion that only fits your persona. <br>
+                  Please choose from the following motions: <span style="color:rgb(90, 124, 248)">[motions]</span> <br>
+                  Please  answer in the following format: state 1, state 2, ... . <br>
+                  Try to choose different meanings of motions that can be used in different situations<br>
+                </div>
+              </div>
+              <div class="row" id="content_demo_2" style="display:None">
+                <div class="child">
+                  <span style="color:green">System Prompt</span><br>
+                  I am <span style="color:rgb(90, 124, 248)">[persosna]</span> robot that is interacting with users. <br>
+                  I can interact with the users by motions, depending on the user’s actions. I want to make a finite-state machine to interact with the user. I have a set of motions that I can do, and I have a set of observations that I can observe from the user. <br>
+                  I can conduct the following actions: <span style="color:rgb(90, 124, 248)">[selected motions]</span><br>
+                  <span style="color:green">User Prompt</span><br>
+                  For each state, we want to estimate the facial expression of the motion.  <br>
+                  The facial expression should be in the following labels: <span style="color:rgb(90, 124, 248)">[facial expression set]</span>  <br>
+                  What would be the facial expressions for state current motion <br>
+                  Please answer in following format: speed: # face <br>
+                  Please adapt the robot persona, <span style="color:rgb(90, 124, 248)">[persosna]</span>  , and give explanation for your answer.<br>
+                </div>
+              </div>
+              <div class="row" id="content_demo_3" style="display:None">
+                <div class="child">
+                  <span style="color:green">System Prompt</span><br>
+                  I am <span style="color:rgb(90, 124, 248)">[persosna]</span> robot that is interacting with users. <br>
+                  I can interact with the users by motions, depending on the user’s actions. I want to make a finite-state machine to interact with the user. I have a set of motions that I can do, and I have a set of observations that I can observe from the user. <br>
+                  I can conduct the following actions: <span style="color:rgb(90, 124, 248)">[selected motions]</span><br>
+                  <span style="color:green">User Prompt</span><br>
+                  which state should the robot start with? <br>
+                  Please adapt the robot persona, <span style="color:rgb(90, 124, 248)">[persosna]</span> and the answer should be in the following format: <br>
+                  state: #, with the explanation <br>
+                </div>
+              </div>
+              <div class="row" id="content_demo_4" style="display:None">
+                <div class="child">
+                  <span style="color:green">System Prompt</span><br>
+                  I am <span style="color:rgb(90, 124, 248)">[persona]</span> robot that is interacting with users. <br>
+                  I can interact with the users by motions, depending on the user’s actions. I want to make a finite-state machine to interact with the user.
+                  I have a set of motions that I can do, and I have a set of observations that I can observe from the user. I can conduct the following actions: <br>
+                  <span style="color:rgb(90, 124, 248)">[motions]</span>
+                  <br>
+                  We have 4 different observations: <br>
+                  1. hand up: The number of person’s raised hand <br>
+                  2. distance: The distance between the person and the robot <br>
+                  3. gaze: The gaze of the person on the robot <br>
+                  4.hand velocity: The velocity of the person’s hand. This would mean how fast the person’s hand is waving. <br>
+                  5. approaching vel: The velocity of the person’s approaching to the robot. This would mean how fast the person is approaching the robot.<br>
+                  <span style="color:green">User Prompt</span><br>
+                  what would be the next state from <span style="color:rgb(90, 124, 248)">[current state]</span> ? <br>
+                  The robot observations: <span style="color:rgb(90, 124, 248)">[observation]</span>  <br>
+                  Try to answer in a way that fits the persona of the robot and the current state.  <br>
+                  In addition, just generate one candidate, and you can choose the same state as the next state.  <br>
+                  Try to generate diverse states that use all different motions and different motions from the different observations.  <br>
+                  Please generate the explanation for the answer first and choose one motion <br>
+                </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </section>  

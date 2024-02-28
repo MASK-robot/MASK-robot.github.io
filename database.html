@@ -37,11 +37,11 @@
   <script src="static/js/index.js"></script>
   <style>
     .child{
-      text-align: left;
-      height: 700px;
-      margin: 20px;
+      text-align: center;
+      height: 900px;
+      margin: 2px;
       border: 2px solid;
-      background-color: #ececeb;
+      background-color: white;
     }
   </style>
 </head>
@@ -108,34 +108,58 @@
             <div class="subtitle has-text-centered">
                 <p>Choose Persona</p>
                 <select class="form-select" size="4" aria-label="size 4 select example">
-                    <option value="demo_1" style="font-size: x-large">Extroverted and Cooperative</option>
-                    <option value="demo_2" style="font-size: x-large">Extroverted and Uncooperative</option>
-                    <option value="demo_3" style="font-size: x-large">Introverted and Cooperative</option>
-                    <option value="demo_4" style="font-size: x-large">Introverted and Uncooperative</option>
+                    <option value="demo_1" style="font-size: large">Extroverted and Cooperative</option>
+                    <option value="demo_2" style="font-size: large">Extroverted and Uncooperative</option>
+                    <option value="demo_3" style="font-size: large">Introverted and Cooperative</option>
+                    <option value="demo_4" style="font-size: large">Introverted and Uncooperative</option>
                   </select>
-                  <p><br>Image</p>
+                  <p><br>Graph Visualization</p>
                 <div class="row" id="content_demo_1">
                     <div class="row">
-                        <span style="color:red">EXtroverted and Cooperative</span> <br>
-                        Some Image will be good
+                        <span style="color:red">Extroverted and Cooperative</span> <br>
+                        <div class="child">
+                            <span style="background-color: rgb(253, 207, 215);">Selected States: look_around, wave_hand_big, attract_to_come_closer, wave_hand_small, small_bow, stand_still</span><br>
+                            <span style="background-color: rgb(245, 249, 227);">Initial State: look_around</span>
+                            <figure class="figure text-center">
+                            <img src="assets/fsm/ours_ec_plot.png" alt="MY ALT TEXT" style="width: 80%">
+                        </figure>
+                        </div>
                     </div>
                 </div>
                 <div class="row" id="content_demo_2" style="display:None">
                     <div class="row">
                         <span style="color:red">Extroverted and Uncooperative</span> <br>
-                        Some Image will be good
+                        <div class="child">
+                            <span style="background-color: rgb(253, 207, 215);">Selected States: look_around, yawn, push_away, cross_arms, teasing</span><br>
+                            <span style="background-color: rgb(245, 249, 227);">Initial State: look_around</span>
+                            <figure class="figure text-center">
+                                <img src="assets/fsm/ours_eu_plot.png" alt="MY ALT TEXT" style="width: 80%">
+                            </figure>
+                            </div>
                     </div>
                 </div>
                 <div class="row" id="content_demo_3" style="display:None">
                     <div class="row">
                         <span style="color:red">Introverted and Cooperative</span> <br>
-                        Some Image will be good
+                        <div class="child">
+                            <span style="background-color: rgb(253, 207, 215);">Selected States: stand_still, look_around, reading_book, wave_hand_small, small_bow</span><br>
+                            <span style="background-color: rgb(245, 249, 227);">Initial State: stand_still</span>
+                            <figure class="figure text-center">
+                                <img src="assets/fsm/ours_ic_plot.png" alt="MY ALT TEXT" style="width: 80%">
+                            </figure>
+                            </div>
                     </div>
                 </div>
                 <div class="row" id="content_demo_4" style="display:None">
                     <div class="row">
                         <span style="color:red">Introverted and Uncooperative</span> <br>
-                        Some Image will be good
+                        <div class="child">
+                            <span style="background-color: rgb(253, 207, 215);">Selected States: stand_still, reading_book, look_around, cross_arms, hide_away</span><br>
+                            <span style="background-color: rgb(245, 249, 227);">Initial State: stand_still</span>
+                            <figure class="figure text-center">
+                                <img src="assets/fsm/ours_iu_plot.png" alt="MY ALT TEXT" style="width: 80%">
+                            </figure>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -149,7 +173,75 @@
         <h2 class="title is-4"><br>Character Based Persona</h2>
             <div class="column is-four-fifths">
             <div class="subtitle has-text-centered">
-                
+                <p>Choose Persona</p>
+                <select class="form-select" size="5" aria-label="size 4 select example">
+                    <option value="char_1" style="font-size: large">Minions from film Minions</option>
+                    <option value="char_2" style="font-size: large">Lion from novel Wizard of OZ</option>
+                    <option value="char_3" style="font-size: large">Scrooge from novel Chirstmas Carol</option>
+                    <option value="char_4" style="font-size: large">Spock from film StarTrek</option>
+                    <option value="char_5" style="font-size: large">Peter Parker from film Spiderman</option>
+                  </select>
+                  <p><br>Graph Visualization</p>
+                <div class="row" id="content_char_1">
+                    <div class="row">
+                        <span style="color:red">Minions from film Minions</span> <br>
+                        <div class="child">
+                            <span style="background-color: rgb(253, 207, 215);">Selected States: look_around, stand_still, yawn, wave_hand_big, attract_to_come_closer, teasing</span><br>
+                            <span style="background-color: rgb(245, 249, 227);">Initial State: look_around</span>
+                            <figure class="figure text-center">
+                            <img src="assets/fsm/ours_MM_plot.png" alt="MY ALT TEXT" style="width: 80%">
+                        </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="content_char_2" style="display:None">
+                    <div class="row">
+                        <span style="color:red">Lion from novel Wizard of OZ</span> <br>
+                        <div class="child">
+                            <span style="background-color: rgb(253, 207, 215);">Selected States: look_around, cry, hide_away, yawn, stand_still</span><br>
+                            <span style="background-color: rgb(245, 249, 227);">Initial State: look_around</span>
+                            <figure class="figure text-center">
+                                <img src="assets/fsm/ours_LO_plot.png" alt="MY ALT TEXT" style="width: 80%">
+                            </figure>
+                            </div>
+                    </div>
+                </div>
+                <div class="row" id="content_char_3" style="display:None">
+                    <div class="row">
+                        <span style="color:red">Scrooge from novel Chirstmas Carol</span> <br>
+                        <div class="child">
+                            <span style="background-color: rgb(253, 207, 215);">Selected States: reading_book, look_around, cross_arms, push_away, yawn</span><br>
+                            <span style="background-color: rgb(245, 249, 227);">Initial State: reading_book</span>
+                            <figure class="figure text-center">
+                                <img src="assets/fsm/ours_SC_plot.png" alt="MY ALT TEXT" style="width: 80%">
+                            </figure>
+                            </div>
+                    </div>
+                </div>
+                <div class="row" id="content_char_4" style="display:None">
+                    <div class="row">
+                        <span style="color:red">Spock from film StarTrek</span> <br>
+                        <div class="child">
+                            <span style="background-color: rgb(253, 207, 215);">Selected States: stand_still, look_around, cross_arms, reading_book</span><br>
+                            <span style="background-color: rgb(245, 249, 227);">Initial State: stand_still</span>
+                            <figure class="figure text-center">
+                                <img src="assets/fsm/ours_SS_plot.png" alt="MY ALT TEXT" style="width: 80%">
+                            </figure>
+                            </div>
+                    </div>
+                </div>
+                <div class="row" id="content_char_5" style="display:None">
+                    <div class="row">
+                        <span style="color:red">Peter Parker from film Spiderman</span> <br>
+                        <div class="child">
+                            <span style="background-color: rgb(253, 207, 215);">Selected States: stand_still, reading_book, look_around, small_bow, wave_hand_small</span><br>
+                            <span style="background-color: rgb(245, 249, 227);">Initial State: stand_still</span>
+                            <figure class="figure text-center">
+                                <img src="assets/fsm/ours_PS_plot.png" alt="MY ALT TEXT" style="width: 80%">
+                            </figure>
+                            </div>
+                    </div>
+                </div>
             </div>
             </div>
     </div>

@@ -1,7 +1,6 @@
 $(document).ready(function() {
     var current_cmd_idxs = {
         "demo": 1,
-        "char": 1,
     }
     // demos
     $('select').on('change', function() {
@@ -17,12 +16,6 @@ $(document).ready(function() {
         // show desired content
         var desired_content = $('#content_' + domain_name + "_" + desired_cmd_idx.toString());
         desired_content.show();
-
-        // switch videos
-        var current_vid = $('#vid_' + domain_name + "_" + current_cmd_idx.toString()).get(0);
-        var desired_vid = $('#vid_' + domain_name + "_" + desired_cmd_idx.toString()).get(0);
-        current_vid.pause();
-        desired_vid.play();
 
         // set current to desired
         current_cmd_idxs[domain_name] = desired_cmd_idx;

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="MASK: Classifying and Disambiguating User Commands for Reliable Interactive Robotic Agents">
+  <meta property="og:title" content="MASK"/>
+  <meta property="og:description" content="Classifying and Disambiguating User Commands for Reliable Interactive Robotic Agents"/>
+  <!-- <meta property="og:url" content="URL OF THE WEBSITE"/> -->
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <!-- <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/> -->
+
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+  <script src="static/js/change_select3.js"></script>
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <style>
+    .child{
+      text-align: left;
+      height: 700px;
+      margin: 20px;
+      border: 2px solid;
+      background-color: #ececeb;
+    }
+  </style>
+</head>
+<body>
+  
+
+<section class="hero is-small">
+    <div class="hero-body">
+        <div class="container">
+        <a href="index.html">
+            <!-- HTML !-->
+            <button class="button-5" role="button">Back</button>
+        </a> 
+        <h2 class="title is-2"><br>Generated Behavior Database</h2>
+            <div class="column is-four-fifths">
+            <div class="subtitle has-text-justified">
+            Original Json Files <br>
+            <a href="files/ec.json">
+                <!-- HTML !-->
+                <button class="button-1" role="button">Extroverted and Cooperative</button>
+            </a>
+            <a href="files/eu.json">
+                <!-- HTML !-->
+                <button class="button-1" role="button">Extroverted and Uncooperative</button>
+            </a>
+            <a href="files/ic.json">
+                <!-- HTML !-->
+                <button class="button-1" role="button">Introverted and Cooperative</button>
+            </a>
+            <a href="files/iu.json">
+                <!-- HTML !-->
+                <button class="button-1" role="button">Introverted and Uncooperative</button>
+            </a> <br> <br>
+            <a href="files/MM.json">
+                <!-- HTML !-->
+                <button class="button-1" role="button">Minions</button>
+            </a>
+            <a href="files/LO.json">
+                <!-- HTML !-->
+                <button class="button-1" role="button">Coward Lion</button>
+            </a>
+            <a href="files/SC.json">
+                <!-- HTML !-->
+                <button class="button-1" role="button">Scrooge</button>
+            </a>
+            <a href="files/SS.json">
+                <!-- HTML !-->
+                <button class="button-1" role="button">Spock</button>
+            </a>
+            <a href="files/PS.json">
+                <!-- HTML !-->
+                <button class="button-1" role="button">Peter Parker</button>
+            </a>
+            </div>
+            </div>
+    </div>
+</section> 
+
+<section class="hero is-small">
+    <div class="hero-body">
+        <div class="container">
+        <h2 class="title is-4"><br>Personality Based Persona</h2>
+            <div class="column is-four-fifths">
+            <div class="subtitle has-text-centered">
+                <p>Choose Persona</p>
+                <select class="form-select" size="4" aria-label="size 4 select example">
+                    <option value="demo_1" style="font-size: x-large">Extroverted and Cooperative</option>
+                    <option value="demo_2" style="font-size: x-large">Extroverted and Uncooperative</option>
+                    <option value="demo_3" style="font-size: x-large">Introverted and Cooperative</option>
+                    <option value="demo_4" style="font-size: x-large">Introverted and Uncooperative</option>
+                  </select>
+                  <p><br>Image</p>
+                <div class="row" id="content_demo_1">
+                    <div class="row">
+                        <span style="color:red">EXtroverted and Cooperative</span> <br>
+                        Some Image will be good
+                    </div>
+                </div>
+                <div class="row" id="content_demo_2" style="display:None">
+                    <div class="row">
+                        <span style="color:red">Extroverted and Uncooperative</span> <br>
+                        Some Image will be good
+                    </div>
+                </div>
+                <div class="row" id="content_demo_3" style="display:None">
+                    <div class="row">
+                        <span style="color:red">Introverted and Cooperative</span> <br>
+                        Some Image will be good
+                    </div>
+                </div>
+                <div class="row" id="content_demo_4" style="display:None">
+                    <div class="row">
+                        <span style="color:red">Introverted and Uncooperative</span> <br>
+                        Some Image will be good
+                    </div>
+                </div>
+            </div>
+            </div>
+    </div>
+</section> 
+
+<section class="hero is-small">
+    <div class="hero-body">
+        <div class="container">
+        <h2 class="title is-4"><br>Character Based Persona</h2>
+            <div class="column is-four-fifths">
+            <div class="subtitle has-text-centered">
+                
+            </div>
+            </div>
+    </div>
+</section> 

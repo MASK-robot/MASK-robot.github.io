@@ -42,12 +42,36 @@
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
   <style>
-    .child{
+    /* .child{
       text-align: left;
       height: 350px;
       margin: 20px;
       border: 2px solid;
       background-color: #ececeb;
+    } */
+    .child{
+      text-align: center;
+      height: 750px;
+      margin: 1px;
+      border: 2px solid;
+      background-color: white;
+    }
+    .parent {
+      display: flex; /* Where the mobile part begins */
+      justify-content: left;
+      text-align: left;
+      flex-wrap: wrap;
+      padding: 5px 0 0 5px;
+    }
+
+    .parent div {
+      height: 400px;
+      width: 500px;
+    }
+
+    .image {
+      width: 200px;
+      height: 500px;
     }
   </style>
 </head>
@@ -60,7 +84,8 @@
         <div class="container is-max-desktop">
         <div class="columns is-centered">
             <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">MASK</h1>
+            <h1 class="title is-1 publication-title">Towards Embedding Dynamic Personas in Interactive Robots: <br>
+              Masquerading Animated Social Kinematics (MASK)</h1>
             <!-- Paper authors -->
             <div class="is-size-5 publication-authors">
             <span class="author-block">
@@ -87,9 +112,7 @@
                 </div>
             <div class="is-size-5 publication-authors">
                 <span class="author-block">Korea University, Korea<sup>1</sup><br>
-                    Rainbow Robotics, Korea<sup>2</sup><br>
-                    NAVER LABS, Korea<sup>3</sup><br>
-                    Queens University, Canada<sup>4</sup><br>
+                    Queens University, Canada<sup>2</sup><br>
                 </span>
                 </div>
             
@@ -161,24 +184,31 @@
     </div>
     </div>
 </section>
-<!-- <section class="hero is-small">
+<section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">News</h2>
-          This work is supported by NAVER LAB
+          Still Writing the paper...
+            <!-- Our paper got accepted in Robotics and Automation Letters (RaL)!🥳🥳 -->
         </div>
       </div>
     </div>
   </div>
-</section> -->
+</section>
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <div class="publication-video">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+              <source src="assets/intro.mp4"
+              type="video/mp4">
+            </video>
+      </div>
+        <h2 class="title is-3"><br>Abstract</h2>
         <div class="content has-text-justified">
           <p>
             This paper presents the design and development
@@ -216,12 +246,12 @@
         <h2 class="title is-3">Proposed method</h2>
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
-            Method VIDEO HERE
-            <!-- <div class="publication-video"> -->
-                <!-- <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <!-- Method VIDEO HERE -->
+            <div class="publication-video">
+                <video poster="" id="video2" autoplay controls muted loop height="100%">
                     <source src="assets/method.mp4"
                     type="video/mp4">
-                  </video> -->
+                  </video>
             </div>
           </div>
         </div>
@@ -242,58 +272,24 @@
               <option value="demo_3" style="font-size: x-large">Introverted and Cooperative</option>
               <option value="demo_4" style="font-size: x-large">Introverted and Uncooperative</option>
             </select>
-            <p><br>Video</p>
             <div class="row" id="content_demo_1">
-              <div class="col-md-12 mb-2">
-                <video id="vid_demo_1" preload="metadata" playsinline controls>
-                    <!-- Your video file here -->
-                    <source src="assets/EC_tunned.mp4"
-                    type="video/mp4">
-                </video>
-              </div>
-              <div class="row">
                 <span style="color:red">Extroverted and Cooperative</span> <br>
-                Some Image will be good
-              </div>
             </div>
             <div class="row" id="content_demo_2" style="display:None">
-              <div class="col-md-12 mb-2">
-                <video id="vid_demo_2" preload="metadata" playsinline controls>
-                    <!-- Your video file here -->
-                    <source src="assets/EU_tunned.mp4"
-                    type="video/mp4">
-                </video>
-              </div>
-              <div class="row">
                 <span style="color:red">Extroverted and Uncooperative</span> <br>
-                Some Image will be good
-              </div>
             </div>
             <div class="row" id="content_demo_3" style="display:None">
-              <div class="col-md-12 mb-2">
-                <video id="vid_demo_3" preload="metadata" playsinline controls>
-                    <!-- Your video file here -->
-                    <source src="assets/IC_tunned.mp4"
-                    type="video/mp4">
-                </video>
-              </div>
-              <div class="row">
                 <span style="color:red">Introverted and Cooperative</span> <br>
-                Some Image will be good
-              </div>
             </div>
             <div class="row" id="content_demo_4" style="display:None">
-              <div class="col-md-12 mb-2">
-                <video id="vid_demo_4" preload="metadata" playsinline controls>
-                    <!-- Your video file here -->
-                    <source src="assets/IU_tunned.mp4"
-                    type="video/mp4">
-                </video>
-              </div>
-              <div class="row">
                 <span style="color:red">Introverted and Cooperative</span> <br>
-                Some Image will be good
-              </div>
+            </div>
+            <div class="col-md-12 mb-2">
+              <video id="vid_demo" preload="metadata" playsinline controls>
+                  <!-- Your video file here -->
+                  <source src="assets/personality.mp4"
+                  type="video/mp4" width="50%">
+              </video>
             </div>
         </div>
     </div>
@@ -313,53 +309,194 @@
               <option value="char_3" style="font-size: x-large">Scrooge</option>
               <option value="char_4" style="font-size: x-large">Spock</option>
             </select>
-            <p><br>Video</p>
             <div class="row" id="content_char_1">
-              <div class="col-md-12 mb-2">
-                <video id="vid_char_1" preload="metadata" playsinline controls>
-                    <source src="assets/MM_tunned.mp4"
-                    type="video/mp4">
-                </video>
+              <span style="color:red">Extroverted and Cooperative</span> <br>
+          </div>
+          <div class="row" id="content_char_2" style="display:None">
+              <span style="color:red">Extroverted and Uncooperative</span> <br>
+          </div>
+          <div class="row" id="content_char_3" style="display:None">
+              <span style="color:red">Introverted and Cooperative</span> <br>
+          </div>
+          <div class="row" id="content_char_4" style="display:None">
+              <span style="color:red">Introverted and Cooperative</span> <br>
+          </div>
+          <div class="col-md-12 mb-2">
+            <video id="vid_char" preload="metadata" playsinline controls>
+                <!-- Your video file here -->
+                <source src="assets/char.mp4"
+                type="video/mp4">
+            </video>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>  
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">User Subject Studies Results</h2>
+        <div class="column is-four-fifths">
+          <div class="subtitle has-text-justified">
+            <img src="assets/res_1.png" alt="MY ALT TEXT" style="width: 60%"> <br>
+            <img src="assets/output.png" alt="MY ALT TEXT" style="width: 60%">
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Persona Infuser</h2>
+        <div class="column is-four-fifths">
+          <div class="subtitle has-text-centered">
+            <div class="parent">
+              <div class="image">
+                <img src="assets/llm.png" style="width: 200%">
               </div>
-              <div class="row">
-                Minion from films Minions
+            
+              <div class="text">
+                <p>
+                  TEXT here
+                </p>
               </div>
+            
             </div>
-            <div class="row" id="content_char_2" style="display:None">
-              <div class="col-md-12 mb-2">
-                <video id="vid_char_2" preload="metadata" playsinline controls>
-                    <source src="assets/LO_tunned.mp4"
-                    type="video/mp4">
-                </video>
+            **Generated Samples**
+            <p>Choose Persona</p>
+                <select class="form-select" size="7" aria-label="size 4 select example">
+                    <option value="graph_1" style="font-size: large">Extroverted and Cooperative</option>
+                    <option value="graph_2" style="font-size: large">Extroverted and Uncooperative</option>
+                    <option value="graph_3" style="font-size: large">Introverted and Cooperative</option>
+                    <option value="graph_4" style="font-size: large">Introverted and Uncooperative</option>
+                    <option value="graph_5" style="font-size: large">Minions from film Minions</option>
+                    <option value="graph_6" style="font-size: large">Lion from novel Wizard of OZ</option>
+                    <option value="graph_7" style="font-size: large">Scrooge from novel Chirstmas Carol</option>
+                    <option value="graph_8" style="font-size: large">Spock from film StarTrek</option>
+                    <option value="graph_9" style="font-size: large">Peter Parker from film Spiderman</option>
+                  </select>
+                  <p><br>Graph Visualization</p>
+                  <div class="row" id="content_graph_1">
+                    <div class="row">
+                        <span style="color:red">Extroverted and Cooperative</span> <br>
+                        <div class="child">
+                            <br>
+                            <span style="background-color: rgb(253, 207, 215);">Selected States: look_around, wave_hand_big, attract_to_come_closer, wave_hand_small, small_bow, stand_still</span><br>
+                            <span style="background-color: rgb(245, 249, 227);">Initial State: look_around</span>
+                            <figure class="figure text-center">
+                            <img src="assets/fsm/ours_ec_plot.png" alt="MY ALT TEXT" style="width: 60%">
+                        </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="content_graph_2" style="display:None">
+                  <div class="row">
+                      <span style="color:red">Extroverted and Uncooperative</span> <br>
+                      <div class="child">
+                          <br>
+                          <span style="background-color: rgb(253, 207, 215);">Selected States: look_around, yawn, push_away, cross_arms, teasing</span><br>
+                          <span style="background-color: rgb(245, 249, 227);">Initial State: look_around</span>
+                          <figure class="figure text-center">
+                              <img src="assets/fsm/ours_eu_plot.png" alt="MY ALT TEXT" style="width: 60%">
+                          </figure>
+                          </div>
+                  </div>
               </div>
-              <div class="row">
-                Lion from novel Wizard of OZ
+              <div class="row" id="content_graph_3" style="display:None">
+                  <div class="row">
+                      <span style="color:red">Introverted and Cooperative</span> <br>
+                      <div class="child">
+                        <br>
+                          <span style="background-color: rgb(253, 207, 215);">Selected States: stand_still, look_around, reading_book, wave_hand_small, small_bow</span><br>
+                          <span style="background-color: rgb(245, 249, 227);">Initial State: stand_still</span>
+                          <figure class="figure text-center">
+                              <img src="assets/fsm/ours_ic_plot.png" alt="MY ALT TEXT" style="width: 60%">
+                          </figure>
+                          </div>
+                  </div>
               </div>
-            </div>
-            <div class="row" id="content_char_3" style="display:None">
-              <div class="col-md-12 mb-2">
-                <video id="vid_char_3" preload="metadata" playsinline controls>
-                    <source src="assets/SC_tunned.mp4"
-                    type="video/mp4">
-                </video>
+              <div class="row" id="content_graph_4" style="display:None">
+                  <div class="row">
+                      <span style="color:red">Introverted and Uncooperative</span> <br>
+                      <div class="child">
+                        <br>
+                          <span style="background-color: rgb(253, 207, 215);">Selected States: stand_still, reading_book, look_around, cross_arms, hide_away</span><br>
+                          <span style="background-color: rgb(245, 249, 227);">Initial State: stand_still</span>
+                          <figure class="figure text-center">
+                              <img src="assets/fsm/ours_iu_plot.png" alt="MY ALT TEXT" style="width: 60%">
+                          </figure>
+                          </div>
+                  </div>
+                </div>
+                <div class="row" id="content_graph_5" style="display:None">
+                  <div class="row">
+                      <span style="color:red">Minions from film Minions</span> <br>
+                      <div class="child">
+                        <br>
+                          <span style="background-color: rgb(253, 207, 215);">Selected States: look_around, stand_still, yawn, wave_hand_big, attract_to_come_closer, teasing</span><br>
+                          <span style="background-color: rgb(245, 249, 227);">Initial State: look_around</span>
+                          <figure class="figure text-center">
+                          <img src="assets/fsm/ours_MM_plot.png" alt="MY ALT TEXT" style="width: 60%">
+                      </figure>
+                      </div>
+                  </div>
               </div>
-              <div class="row">
-                Scrooge from novel Christmas Carol
+              <div class="row" id="content_graph_6" style="display:None">
+                  <div class="row">
+                      <span style="color:red">Lion from novel Wizard of OZ</span> <br>
+                      <div class="child">
+                        <br>
+                          <span style="background-color: rgb(253, 207, 215);">Selected States: look_around, cry, hide_away, yawn, stand_still</span><br>
+                          <span style="background-color: rgb(245, 249, 227);">Initial State: look_around</span>
+                          <figure class="figure text-center">
+                              <img src="assets/fsm/ours_LO_plot.png" alt="MY ALT TEXT" style="width: 60%">
+                          </figure>
+                          </div>
+                  </div>
               </div>
-            </div>
-            <div class="row" id="content_char_4" style="display:None">
-              <div class="col-md-12 mb-2">
-                <video id="vid_char_4" preload="metadata" playsinline controls>
-                    <source src="assets/SS_tunned.mp4"
-                    type="video/mp4">
-                </video>
+              <div class="row" id="content_graph_7" style="display:None">
+                  <div class="row">
+                      <span style="color:red">Scrooge from novel Chirstmas Carol</span> <br>
+                      <div class="child">
+                        <br>
+                          <span style="background-color: rgb(253, 207, 215);">Selected States: reading_book, look_around, cross_arms, push_away, yawn</span><br>
+                          <span style="background-color: rgb(245, 249, 227);">Initial State: reading_book</span>
+                          <figure class="figure text-center">
+                              <img src="assets/fsm/ours_SC_plot.png" alt="MY ALT TEXT" style="width: 60%">
+                          </figure>
+                          </div>
+                  </div>
               </div>
-              <div class="row">
-                Spock from StarTrek
+              <div class="row" id="content_graph_8" style="display:None">
+                  <div class="row">
+                      <span style="color:red">Spock from film StarTrek</span> <br>
+                      <div class="child">
+                        <br>
+                          <span style="background-color: rgb(253, 207, 215);">Selected States: stand_still, look_around, cross_arms, reading_book</span><br>
+                          <span style="background-color: rgb(245, 249, 227);">Initial State: stand_still</span>
+                          <figure class="figure text-center">
+                              <img src="assets/fsm/ours_SS_plot.png" alt="MY ALT TEXT" style="width: 60%">
+                          </figure>
+                          </div>
+                  </div>
+              </div>
+              <div class="row" id="content_graph_9" style="display:None">
+                  <div class="row">
+                      <span style="color:red">Peter Parker from film Spiderman</span> <br>
+                      <div class="child">
+                        <br>
+                          <span style="background-color: rgb(253, 207, 215);">Selected States: stand_still, reading_book, look_around, small_bow, wave_hand_small</span><br>
+                          <span style="background-color: rgb(245, 249, 227);">Initial State: stand_still</span>
+                          <figure class="figure text-center">
+                              <img src="assets/fsm/ours_PS_plot.png" alt="MY ALT TEXT" style="width: 60%">
+                          </figure>
+                          </div>
+                  </div>
               </div>
             </div>
           </div>
-        </div>
     </div>
   </div>
 </section>  

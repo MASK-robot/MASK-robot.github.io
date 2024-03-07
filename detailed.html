@@ -43,6 +43,18 @@
       border: 2px solid;
       background-color: #ececeb;
     }
+    table {
+          width: 100%;
+          border-collapse: collapse;
+        }
+      th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
   </style>
 </head>
 <body>
@@ -55,10 +67,70 @@
             <!-- HTML !-->
             <button class="button-5" role="button">Back</button>
         </a> 
-        <h2 class="title is-2"><br>Detailed Results</h2>
+        <h2 class="title is-2"><br>Additional Results</h2>
             <div class="column is-four-fifths">
             <div class="subtitle has-text-justified">
-                TODO
+              <b>Number of Participants in Phase 1</b>
+              <table>
+                <tr>
+                  <th>Number of Participants</th>
+                  <th>Extroverted Persona</th>
+                  <th>Introverted Persona</th>
+                  <th>Sum</th>
+                </tr>
+              </xsl:for-each>
+                <tr>
+                  <th> Agreeable Persona </th>
+                  <td>Extroverted and Cooperative (13) </td>
+                  <td>Introverted and Cooperative (13)</td>
+                  <th> 26</th>
+                </tr>
+                </xsl:for-each>
+                <tr>
+                  <th> Disagreeable Persona </th>
+                  <td>Extroverted and Uncooperative (13) </td>
+                  <td>Introverted and Uncooperative (13)</td>
+                  <th> 26</th>
+                </tr>
+                </xsl:for-each>
+                <tr>
+                  <th>Sum</th>
+                  <th>26 </th>
+                  <th>26</th>
+                  <th> 52</th>
+                </tr>
+                </xsl:for-each>
+              </table>
+              <b>Number of Participants in Phase 2</b>
+              <table>
+                <tr>
+                  <th>Minions</th>
+                  <th>Cowardly Lion</th>
+                  <th>Scrooge</th>
+                  <th>Spock</th>
+                  <th>Total</th>
+                </tr>
+                  <td>27</td>
+                  <td>27</td>
+                  <td>27</td>
+                  <td>27</td>
+                  <th>108</th>
+              </xsl:for-each>
+              </table>
+              <b>Number of Participants in Pre-studies & Ablation Studies</b>
+              <table>
+                <tr>
+                  <th>No Facial Expression (Screen off)</th>
+                  <th>Random Facial Expression</th>
+                  <th>Random Motion</th>
+                  <th>Total</th>
+                </tr>
+                  <td>16</td>
+                  <td>28</td>
+                  <td>28</td>
+                  <th>72</th>
+              </xsl:for-each>
+              </table>
             </div>
             </div>
     </div>
@@ -71,7 +143,7 @@
       <h2 class="title is-4"><br>Phase 1 - Personality Identification</h2>
       <div class="column is-four-fifths">
       <div class="subtitle has-text-justified">
-
+        <img src="assets/res_1.png" alt="MY ALT TEXT" style="width: 60%"><br>
     </div>
     </div>
   </div>
@@ -85,7 +157,7 @@
       <h2 class="title is-4"><br>Phase 1 - Satisfaction</h2>
       <div class="column is-four-fifths">
       <div class="subtitle has-text-justified">
-
+        <img src="assets/res_3.png" alt="MY ALT TEXT" style="width: 60%"><br>
       </div>
       </div>
     </div>
@@ -98,7 +170,7 @@
         <h2 class="title is-4"><br>Phase 2 - Keywords for Each characters</h2>
         <div class="column is-four-fifths">
         <div class="subtitle has-text-justified">
-          
+          <img src="assets/res_5.png" alt="MY ALT TEXT" style="width: 40%"><br>
       </div>
       </div>
     </div>
@@ -125,7 +197,21 @@
       <h2 class="title is-4"><br>Pre-studies - Impact of Facial Expression</h2>
       <div class="column is-four-fifths">
       <div class="subtitle has-text-justified">
+        <img src="assets/res_2.png" alt="MY ALT TEXT" style="width: 60%"><br>
+      </div>
+    </div>
+  </div>
+  </div>
+</section> 
 
+
+<section class="hero is-small">
+  <div class="hero-body">
+      <div class="container">
+      <h2 class="title is-4"><br>Ablation-studies - Effect of Motions and Facial Expressions</h2>
+      <div class="column is-four-fifths">
+      <div class="subtitle has-text-justified">
+        <img src="assets/res_4.png" alt="MY ALT TEXT" style="width: 60%"><br>
       </div>
     </div>
   </div>

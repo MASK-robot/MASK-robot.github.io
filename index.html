@@ -61,17 +61,20 @@
       justify-content: left;
       text-align: left;
       flex-wrap: wrap;
-      padding: 5px 0 0 5px;
+      margin: 10px;
+      padding: 5px 0 5px 5px;
     }
 
     .parent div {
-      height: 400px;
-      width: 500px;
+      margin: 1px;
+      height: 300px;
+      width: 300px;
     }
 
     .image {
-      width: 200px;
-      height: 500px;
+      margin: 5px;
+      width: 300px;
+      height: 300px;
     }
   </style>
 </head>
@@ -112,7 +115,9 @@
                 </div>
             <div class="is-size-5 publication-authors">
                 <span class="author-block">Korea University, Korea<sup>1</sup><br>
-                    Queens University, Canada<sup>2</sup><br>
+                  Rainbow Robotics, Korea<sup>2</sup><br>
+                  NAVER LABS, Korea<sup>3</sup><br>
+                  Queens University, Canada<sup>4</sup><br>
                 </span>
                 </div>
             
@@ -282,7 +287,7 @@
                 <span style="color:red">Introverted and Cooperative</span> <br>
             </div>
             <div class="row" id="content_demo_4" style="display:None">
-                <span style="color:red">Introverted and Cooperative</span> <br>
+                <span style="color:red">Introverted and Uncooperative</span> <br>
             </div>
             <div class="col-md-12 mb-2">
               <video id="vid_demo" preload="metadata" playsinline controls>
@@ -310,16 +315,16 @@
               <option value="char_4" style="font-size: x-large">Spock</option>
             </select>
             <div class="row" id="content_char_1">
-              <span style="color:red">Extroverted and Cooperative</span> <br>
+              <span style="color:red">Minion</span> <br>
           </div>
           <div class="row" id="content_char_2" style="display:None">
-              <span style="color:red">Extroverted and Uncooperative</span> <br>
+              <span style="color:red">Coward Lion</span> <br>
           </div>
           <div class="row" id="content_char_3" style="display:None">
-              <span style="color:red">Introverted and Cooperative</span> <br>
+              <span style="color:red">Scrooge</span> <br>
           </div>
           <div class="row" id="content_char_4" style="display:None">
-              <span style="color:red">Introverted and Cooperative</span> <br>
+              <span style="color:red">Spock</span> <br>
           </div>
           <div class="col-md-12 mb-2">
             <video id="vid_char" preload="metadata" playsinline controls>
@@ -338,8 +343,63 @@
       <h2 class="title is-3">User Subject Studies Results</h2>
         <div class="column is-four-fifths">
           <div class="subtitle has-text-justified">
+            <b>Hypohesis</b><br>
+            <div class="c" style="float:left; font-size:18px;">
+            We hypothesize that by embedding a character template
+            into robotic behavior, interactive agents can convincingly
+            embody distinct personas for users to engage with. In par-
+            ticular, we aim to achieve this through a simple finite-state
+            machine framework, which determines robotic actions from
+            an observed user’s behavior, a current robot’s behavior, and a
+            persona
+          </div>
+            <br><br>
+
+            <b>Survey Phase 1 - Personality Based Persona</b><br>
+            <div class="c" style="float:left; font-size:18px;">
+            During the first phase of the survey, the participants were exposed to personality-based persona robots. (between-subject studies)<br>
+            The users were asked to score the extroversion (E-score) and agreeableness (A-score) of the robot. <br>
+            We conducted a two-way repeated-measures MANOVA on the results obtained from user survey questions S1 and S2 with α = 0.05. <br>
             <img src="assets/res_1.png" alt="MY ALT TEXT" style="width: 60%"> <br>
-            <img src="assets/output.png" alt="MY ALT TEXT" style="width: 60%">
+            We observed that the users could recognize both extroversion and the agreeableness of the robot. <br>
+            There was a significiant difference is measured E-score between interacted persona (extroverted - introverted).<br>
+            In addition, there was a significiant difference is measured A-score between interacted persona (agreeable - disagreeable).<br>
+          </div>
+            <br>
+
+            <b>Survey Phase 2 - Film Character Based Persona</b><br>
+            <div class="c" style="float:left; font-size:18px;">
+            During the first phase of the survey, the participants were exposed to character-based persona robots. (between-subject studies)<br>
+            The users were asked to choose one of the six choices of the character and rate the matching score. <br>
+            <img src="assets/output.png" alt="MY ALT TEXT" style="width: 60%"><br>
+            The classification accuracy was reported as 76.7%, the users were able to identify and classify the intended mimicing character. <br>
+            We observed that the users could successfully
+            identify the Cowardly Lion from The Wizard of OZ, Minions,
+            and Scrooge characters. However, participants appeared to
+            misclassify the character of Spock, especially between Spock
+            (0.44) and Scrooge (0.39). <br>
+            </div>
+            <br>
+            For more details, please check <br>
+            <span class="link-block">
+              <a href="./protocols.html" target="_self"
+              class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <i class="fas fa-file-pdf"></i>
+              </span>
+              <span>User Subject Studies Protocols</span>
+            </a>
+          </span>
+          or 
+          <span class="link-block">
+            <a href="./detailed.html" target="_self"
+            class="external-link button is-normal is-rounded is-dark">
+            <span class="icon">
+              <i class="fas fa-file-pdf"></i>
+            </span>
+            <span>Detailed Results</span>
+          </a>
+        </span>
           </div>
         </div>
     </div>
@@ -351,20 +411,27 @@
     <div class="container">
       <h2 class="title is-3">Persona Infuser</h2>
         <div class="column is-four-fifths">
-          <div class="subtitle has-text-centered">
-            <div class="parent">
+          <div class="subtitle has-text-justified">
+            <p>
+              In the quest to embed robots with distinct personas, we introduce a persona infuser that constructs a behavior database.
+              This database, acts as a blueprint for persona-driven behavior, encoding all possible combinations of states, observations, and transitions by large language models.
+            </p>
+            <img src="assets/llm.png" style="width: 50%">
+            <!-- <div class="parent">
               <div class="image">
                 <img src="assets/llm.png" style="width: 200%">
               </div>
             
               <div class="text">
                 <p>
-                  TEXT here
+                  In the quest to embed robots with distinct personas, we introduce a persona infuser that constructs a behavior database.
+                  This database, acts as a blueprint for persona-driven behavior, encoding all possible combinations of states, observations, and transitions by large language models.
                 </p>
-              </div>
+              </div> -->
             
-            </div>
-            **Generated Samples**
+            <!-- </div> -->
+            <br>
+            <b>Generated Samples</b>
             <p>Choose Persona</p>
                 <select class="form-select" size="7" aria-label="size 4 select example">
                     <option value="graph_1" style="font-size: large">Extroverted and Cooperative</option>

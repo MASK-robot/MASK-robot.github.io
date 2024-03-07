@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="MASK: Classifying and Disambiguating User Commands for Reliable Interactive Robotic Agents">
+  <meta name="description" content="MASK: ">
   <meta property="og:title" content="MASK"/>
-  <meta property="og:description" content="Classifying and Disambiguating User Commands for Reliable Interactive Robotic Agents"/>
+  <meta property="og:description" content=""/>
   <!-- <meta property="og:url" content="URL OF THE WEBSITE"/> -->
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <!-- <meta property="og:image" content="static/image/your_banner_image.png" />
@@ -38,11 +38,29 @@
   <style>
     .child{
       text-align: left;
-      height: 700px;
-      margin: 20px;
+      height: 200px;
+      margin: 10px;
       border: 2px solid;
       background-color: #ececeb;
+      font-size: medium;
     }
+    .child2{
+      text-align: left;
+      height: 110px;
+      margin: 10px;
+      border: 2px solid;
+      background-color: #ececeb;
+      font-size: medium;
+    }
+    .child3{
+      text-align: left;
+      height: 130px;
+      margin: 10px;
+      border: 2px solid;
+      background-color: #ececeb;
+      font-size: medium;
+    }
+    
   </style>
 </head>
 <body>
@@ -83,6 +101,43 @@
                     type="video/mp4">
                 </video>
             </div>
+            <div class="child">
+            Hello,
+            Thank you for taking the time to respond, even though you are busy. <br>
+
+            A robot inside a glass fence will recognize and respond to the user's actions. <br>
+
+            The actions recognized by the robot are as follows: <br>
+
+            - Approaching <br>
+
+            - Looking at the robot, not looking <br>
+
+            - Raising one hand, raising both hands, not raising hands <br>
+
+            - Waving, not waving <br>
+
+            Based on these given factors, you can communicate with the robot non-verbally. <br>
+            Please interact with robot for a minute and fillout the questions.
+            </div>
+            <b>Phase 1 - Personality</b>
+            <div class="child2">
+                In the survey phase 1, the objective of the study is to test if the users and identify the 
+                intended persoanlity of the robot.  <br>
+                We have embedded a one random personality to the robot, and the participants
+                should focus on whether the you feel the robot <br>
+                introverted or extroverted and agreeable and disagreeable. 
+            </div>
+            <b>Phase 2 - Personality</b>
+            <div class="child2">
+                In the survey phase 2, the objective of the study is to test if the users and identify the 
+                recognize which character the robot is trying to mimic  <br>
+                We have embedded a one random film character to the robot,
+                and is testing if the user can identify it. <br>
+                To avoid the bias, the survey will first ask you to fillout the keywords,
+                and on the next page, you are asked to choose closest character that matches with the personality of the robot. <br>
+                Please keep in mind that our robot does not mimic the character by apperance, but more on the persoanlity side.
+            </div>
         </div>
         </div>
     </div>
@@ -94,6 +149,32 @@
         <h2 class="title is-4"><br>Survey 1 User study Questionaires (Personality Based Persona)</h2>
         <div class="column is-four-fifths">
         <div class="subtitle has-text-justified">
+            <div class="slidecontainer">
+                <p> <b>S1: Score the extroversion of the robot </b></p>
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                <div class="c" style="float:left; font-size:14px;">Introverted</div>
+                <div class="c" style="float:right; font-size:14px;">Extroverted</div>
+            </div>
+            <br><br>
+            <div class="slidecontainer">
+                <p> <b>S2: Score the agreeableness of the robot </b></p>
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                <div class="c" style="float:left; font-size:14px;">Disagreeable</div>
+                <div class="c" style="float:right; font-size:14px;">Agreeable</div>
+            </div>
+            <br> <br>
+            <div class="slidecontainer">
+                <p> <b>S3: What is your overall satisfaction of the interaction. </b> </p>
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                <div class="c" style="float:left; font-size:14px;">Not so</div>
+                <div class="c" style="float:right; font-size:14px;">Very much so</div>
+            </div>
+            <br>
+            <div class="slidecontainer">
+                <p> <b>Please feel free to write down the reasons for your above answers. </b> </p>
+                <input type="text" id="keywords" name="keywords" style="height: 100px; width: 1000px;">
+            </div>
+            <br>
         </div>
         </div>
     </div>
@@ -105,6 +186,17 @@
         <h2 class="title is-4"><br>Character Based Persona Additional Guidelines</h2>
         <div class="column is-four-fifths">
         <div class="subtitle has-text-justified">
+            To help the participants better understand the objective of the study, we have provided
+            and example persona to the participants before starting the actual survey. 
+            <div class="child3">
+                So, this is the one example of mimicing persona. <br>
+                In this case, this robot is representing the "Peter Parker" character of "Spiderman 1".
+                <a href="https://en.wikipedia.org/wiki/Spider-Man_(2002_film)">Spiderman 1</a>  <br>
+                We are not representing heorotic characteristic of the spiderman, but more on Peter himself. <br>
+                <b>A nerdy but friendly neighbor</b> (Showing the <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.shortpedia.com%2Fen-in%2Fdid-You-Know%2Fdid-you-know-facts%2Fdid-you-know-the-tray-scene-from-spiderman-scene-took-156-takes-1637703224&psig=AOvVaw0AVSa_szPGBpZfNnds9e3V&ust=1709885116507000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCOCt08nY4YQDFQAAAAAdAAAAABAW)">pictire</a> from the movie )
+                As you see here, this robot reads a book if no one is engaing, representing a nerdy behavior, <br>
+                But actively engage you by waving hands or bowing if i start to greet them, like a friendly neighbor. 
+            </div>
             <div class="publication-video">
                 <video poster="" id="video_pro" autoplay controls muted loop height="80%">
                     <source src="assets/ps.mp4"
@@ -123,7 +215,49 @@
         <h2 class="title is-4"><br>Survey 2 User study Questionaires (Character Based Persona)</h2>
         <div class="column is-four-fifths">
         <div class="subtitle has-text-justified">
-            
+            <div class="slidecontainer">
+                <p> <b>S4: List keywords that describe the robot's personality or behavior.</b></p>
+                <input type="text" id="keywords" name="keywords" style="height: 20px; width: 1000px;">
+            </div>
+            <br>
+            ----------------------------------Next Page----------------------------------
+            <br> <br>
+            <div class="slidecontainer">
+                <p> <b>S5: Which of the following characters does the robot's behavior seem to be most similar to? </b></p>
+                <figure class="figure text-center">
+                    <img src="assets/choice.png" alt="MY ALT TEXT" style="width: 80%">
+                </figure>
+                <fieldset>
+                    <input type="radio" name="gender" value="male" /> Spock (from StarTrek)
+                    <input type="radio" name="gender" value="female" /> Scrooge (from Christmas Carol)
+                    <input type="radio" name="gender" value="female" /> Captain America (from The avengers)  <br>
+                    <input type="radio" name="gender" value="female" /> Cowardly Lion (from Wizard of OZ)
+                    <input type="radio" name="gender" value="female" /> Minions (from Minions)
+                    <input type="radio" name="gender" value="female" /> Sloth (from Zootopia) 
+                </fieldset>    
+            </div>
+            <div class="child">
+                1. <b>Spock (from StarTrek)</b> Spock has a stoic personality and does not casually express his opinions or emotions.<br>
+                2. <b>Scrooge</b> Scrooge is a greedy and grumpy old miser.<br>
+                3. <b>Captain America</b> Captain America is a superhero character that embodies patriotism, often regarded as an exemplary figure due to his virtues.<br>
+                4. <b>Cowardly Liion</b> The Lion is characterized as a coward. <br>
+                5. <b>Minions</b> Minions are mischievous, always lively, spirited, and act bravely. <br>
+                6. <b>Sloth</b> Priscilla the Sloth has a relaxed personality and slow at everything. <br>
+            </div>
+
+            <br> <br>
+            <div class="slidecontainer">
+                <p> <b>S6: Rate how well the robot imitates the personality of the character you selected in the previous quesiton. </b> </p>
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                <div class="c" style="float:left; font-size:14px;">Not so</div>
+                <div class="c" style="float:right; font-size:14px;">Very much so</div>
+            </div>
+            <br>
+            <div class="slidecontainer">
+                <p> <b>Please feel free to write down the reasons for your above answers. </b> </p>
+                <input type="text" id="keywords" name="keywords" style="height: 100px; width: 1000px;">
+            </div>
+            <br>
         </div>
         </div>
     </div>

@@ -131,6 +131,11 @@
                   <th>72</th>
               </xsl:for-each>
               </table>
+              <b>Notations</b><br>
+              E-Score denotes extroversion measured by users from survey question 1, A-Score denotes agreeableness answerd from survey question 2. <br>
+              Agr., Dis., Ext., and Int. denote agreeable, disagreeable, extroverted, and introverted persona, respectively. <br>
+              * denotes 0.01 < p < 0.05, ** denotes p < 0.01, and *** denotes p < 0.001. The error bars represent 95% confidence intervals.
+              The significance level was 0.05 <br>
             </div>
             </div>
     </div>
@@ -140,24 +145,13 @@
 <section class="hero is-small">
   <div class="hero-body">
       <div class="container">
-      <h2 class="title is-4"><br>Phase 1 - Personality Identification</h2>
-      <div class="column is-four-fifths">
-      <div class="subtitle has-text-justified">
-        <img src="assets/res_1.png" alt="MY ALT TEXT" style="width: 60%"><br>
-    </div>
-    </div>
-  </div>
-  </div>
-</section> 
-
-
-<section class="hero is-small">
-  <div class="hero-body">
-      <div class="container">
-      <h2 class="title is-4"><br>Phase 1 - Satisfaction</h2>
+      <h2 class="title is-4"><br>Phase 1 - Satisfaction among Personality Personas</h2>
       <div class="column is-four-fifths">
       <div class="subtitle has-text-justified">
         <img src="assets/res_3.png" alt="MY ALT TEXT" style="width: 60%"><br>
+      Satisfaction obtained from survey phase 1 question 3.  <br>
+      Analyze Method: two-way ANOVA, fixed factors are extroversion persona and agreeable persona and the dependent variable is satisfaction score. <br>
+      Results: Significant differences between agreeable and disagreeable personas (F(1,48) = 4.799, p = 0.033, partial η2 = 0.091). No significiant difference between extroversion persona factor.  <br>
       </div>
       </div>
     </div>
@@ -167,10 +161,29 @@
   <section class="hero is-small">
     <div class="hero-body">
         <div class="container">
-        <h2 class="title is-4"><br>Phase 2 - Keywords for Each characters</h2>
+        <h2 class="title is-4"><br>Phase 2 - Mentioned Keywords among Character Personas</h2>
         <div class="column is-four-fifths">
         <div class="subtitle has-text-justified">
-          <img src="assets/res_5.png" alt="MY ALT TEXT" style="width: 40%"><br>
+          <img src="assets/res_6.png" alt="MY ALT TEXT" style="width: 40%"><br>
+          Keywords obtained from survey phase 2 question 4.
+      </div>
+      </div>
+    </div>
+    </div>
+  </section> 
+
+  <section class="hero is-small">
+    <div class="hero-body">
+        <div class="container">
+        <h2 class="title is-4"><br>Phase 2 - Satisfaction among Character Personas</h2>
+        <div class="column is-four-fifths">
+        <div class="subtitle has-text-justified">
+          <img src="assets/res_5.png" alt="MY ALT TEXT" style="width: 60%"><br>
+          Satisfaction obtained from survey phase 2 question 7.  <br>
+          Analyze Method: one-way ANOVA, fixed factor is persona and the dependent variable is satisfaction score. <br>
+          Results: Significant differences between personas (F(3,104) = 7.300, p < 0.001, partial η2 = 0.174). <br>
+          With a post-hoc test, we observed that there was a significant satisfaction difference between Minion persona and the rest of characters.
+          Minions - Cowardly lion had p < 0.001, Minions - Scrooge had p = 0.003, and Minions - Coward lion had p < 0.001,.  <br>
       </div>
       </div>
     </div>
@@ -254,10 +267,16 @@ The difference in facial expressions is not pronounced, making it difficult to d
 <section class="hero is-small">
   <div class="hero-body">
       <div class="container">
-      <h2 class="title is-4"><br>Pre-studies - Impact of Facial Expression</h2>
+      <h2 class="title is-4"><br>Pre-studies - Impact of Facial Expression (Personality Persona)</h2>
       <div class="column is-four-fifths">
       <div class="subtitle has-text-justified">
         <img src="assets/res_2.png" alt="MY ALT TEXT" style="width: 60%"><br>
+        Analyze Method: We employed a 2-way MANOVA, focusing on three key factors: the extroversion and agreeableness of the robot's persona, and the presence or absence of facial expressions. <br>
+        Results: The analysis revealed that the interaction effect between the facial expression condition and the extroversion persona, 
+        in terms of extroversion scores, was not statistically significant (F(1,60) = 0.855, p = 0.329, partial η2 = 0.014 with a significance level 0.05). 
+        Similarly, the interaction effect between the facial expression condition and the agreeable persona, in terms of agreeableness scores, also failed to reach statistical significance 
+        (F(1,60) = 1.237, p = 0.270, partial η2 = 0.02). 
+        Consequently, our study did not find a significant difference attributable to the presence or absence of facial expressions in persona identification. <br>
       </div>
     </div>
   </div>
@@ -268,10 +287,24 @@ The difference in facial expressions is not pronounced, making it difficult to d
 <section class="hero is-small">
   <div class="hero-body">
       <div class="container">
-      <h2 class="title is-4"><br>Ablation-studies - Effect of Motions and Facial Expressions</h2>
+      <h2 class="title is-4"><br>Ablation-studies - Effect of Motions and Facial Expressions (Personality Persona)</h2>
       <div class="column is-four-fifths">
       <div class="subtitle has-text-justified">
         <img src="assets/res_4.png" alt="MY ALT TEXT" style="width: 60%"><br>
+        Scoring Method: <br>
+        - Exroversion Fitting Score (Ext.-Fitting-Score): E-score if persona is extroverted
+        & Otherwise 100- E-score
+        <br>
+        - Agreeableness Fitting Score (Agr.-Fitting-Score): A-score if persona is agreeable
+        & Otherwise 100- A-score <br>
+        Comparing Method: No facial expression (Screen off), randomized facial expression, randomized motion<br>
+        Analyze Method: two-way ANOVA, fixed factor is the ablation condition and the dependent variables are both scores. <br>
+        Results: Significant differences between Agr.-Fitting-Score (F(3,112) = 3.129, p=0.029, partial η2 = 0.052). 
+        Fot post-hoc test, there was a significant difference in Ext.-Fitting-Score of prposed method and randomized motion (p=0.015). 
+        In addition, Agr.-Fitting-Score had a significant difference between the same two factor (p=0.046), randomized motion-randimized face (p=0.007), and randomized motion-no face (p=0.015). 
+        However, this shows that agreeableness indentification was better when the motion was randomized.
+        As this ablation studies lacks the statisfical power, the results should be interpreted in caution. 
+        We have observed that the motion effects significantly in extroversion factor, while the facial expression may be more dominant in understanding the agreeableness of the proposed method.<br>
       </div>
     </div>
   </div>
